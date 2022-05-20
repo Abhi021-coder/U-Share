@@ -1,4 +1,4 @@
-require("dotenv").config();
+require("dotenv").config({ path: "./vars/.env" });
 const express = require("express");
 const router = express.Router();
 const multer = require("multer");
