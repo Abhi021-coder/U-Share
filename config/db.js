@@ -6,16 +6,11 @@ function connectDB() {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
 	});
-
 	const connection = mongoose.connection;
 
 	connection
-		.once("open", () => {
-			console.log("Database connected.");
-		})
-		.on("error", (err) => {
-			console.log("Connection Failed.", { err });
-		});
+		.once("open", () => console.log("Database Connected"))
+		.on("error", (err) => console.log("Connection Failed", { err }));
 }
 
 module.exports = connectDB;
